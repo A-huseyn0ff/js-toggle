@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body{
+            height: 100vh;
+            width: 400px;
+        }
+        #acardions{
+           margin: auto;
+            box-shadow: 2px 2px 20px 7px rgba(0,0,0,0.56);
+-webkit-box-shadow: 2px 2px 20px 7px rgba(0,0,0,0.56);
+-moz-box-shadow: 2px 2px 20px 7px rgba(0,0,0,0.56);
+        }
+        .firstbtn{
+            padding-left: 20px;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+border-bottom: 1px solid rgb(194, 190, 190);
+        }
+        .firstlorem{
+            border-bottom: 1px solid rgb(194, 190, 190);
+            text-align: center;
+            display: none;
+        }
+        .secondbtn{
+            padding-left: 20px;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(194, 190, 190);
+        }
+        .secondlorem{
+            border-bottom: 1px solid rgb(194, 190, 190);
+            text-align: center;
+            display: none;
+        }
+.thirdbtn{
+    padding-left: 20px;
+    gap: 10px;
+    display: flex;
+            align-items: center;
+            border-left: none;
+            border-right: none;
+    border-bottom: 1px solid rgb(194, 190, 190);
+}
+.thirdlorem{
+    border-bottom: 1px solid rgb(194, 190, 190);
+    text-align: center;
+    display: none;
+}
+.first{
+display: block;
+}
+.second{
+display: block;
+}
+.third{
+display: block;
+}
+    </style>
+</head>
+<body>
+    <div id="acardions">
+        <div class="firstbtn" id="bir">
+            <i class="fa-solid fa-cloud"></i>
+            <h5>First</h5>
+        </div>
+        <div class="firstlorem" id="one">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus?</p>
+                    </div>
+        <div class="secondbtn" id="iki">
+            <i class="fa-solid fa-location-dot"></i>
+            <h5>Second</h5>
+        </div>
+        <div class="secondlorem" id="two">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, obcaecati?</p>
+                    </div>
+        <div class="thirdbtn" id="uc">
+            <i class="fa-solid fa-fire"></i>
+            <h5>Third</h5>
+        </div>
+        <div class="thirdlorem" id="three">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, neque!</p>
+        </div>
+        
+    </div>
+    <script>
+let firstbtn=document.getElementById('bir')
+let secondbtn=document.getElementById('iki')
+let thirdbtn=document.getElementById('uc')
+let firstlorem=document.getElementById('one')
+let secondlorem=document.getElementById('two')
+let thirdlorem=document.getElementById('three')
+firstbtn.addEventListener('click',()=>{
+    firstlorem.classList.toggle('first')
+    thirdlorem.classList.remove('third')
+    secondlorem.classList.remove('second')
+})
+secondbtn.addEventListener('click',()=>{
+    secondlorem.classList.toggle('second')
+    thirdlorem.classList.remove('third')
+    firstlorem.classList.remove('first')
+})
+thirdbtn.addEventListener('click',()=>{
+    thirdlorem.classList.toggle('third')
+    secondlorem.classList.remove('second')
+    firstlorem.classList.remove('first')  
+})
+    </script>
+</body>
+</html>
